@@ -1,7 +1,7 @@
 {% set data = load_setup_py_data() %}
 
 package:
-  name: PROJECT
+  name: optotrak
   version: {{ data.get('version') }}
 
 source:
@@ -9,7 +9,7 @@ source:
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install --no-deps -vv . 
+  script: {{ PYTHON }} -m pip install --no-deps -vv .
 
 requirements:
   host:
@@ -17,12 +17,12 @@ requirements:
     - pip
   run:
     - python
-    # Other runtime dependencies
+    - numpy
+    - pandas
 
 test:
   imports:
-    - PACKAGE
-    - PACKAGE.SUBPACKAGE
+    - optotrak
   requires:
     - pytest
   source_files:

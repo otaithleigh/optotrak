@@ -17,10 +17,10 @@ except ImportError:
 # Configuration
 #===============================================================================
 # The name used by PyPi and Conda
-NAME = 'NAME'
+NAME = 'optotrak'
 
 # The actual importable package name
-PACKAGE = 'PACKAGE'
+PACKAGE = 'optotrak'
 
 # Conda options
 CONDABUILD = 'mambabuild'
